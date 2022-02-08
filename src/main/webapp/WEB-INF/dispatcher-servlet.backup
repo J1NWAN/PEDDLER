@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/mvc
+        https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- 해당 URL로 요청이 오면 객체화 하여 호출 -->
+	<bean id="/index"
+		class="com.peddler.web.controller.HomeController">
+		<!-- collaborators and configuration for this bean go here -->
+	</bean>
+	
+	<!-- JSP파일의 CSS, JSP등 경로를 지정 -->
+	<mvc:resources location="/WEB-INF/views/" mapping="/**"></mvc:resources>
+</beans>
